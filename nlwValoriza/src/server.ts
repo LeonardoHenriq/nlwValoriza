@@ -2,8 +2,10 @@ import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
 import {router} from "./routes";
+import cors from "cors";
 
 const app = express();
+app.use(cors()); // setar origin: para sites especificos
 
 import "./database";
 
